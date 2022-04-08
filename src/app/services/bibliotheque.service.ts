@@ -50,7 +50,6 @@ export class BibliothequeService {
   ];
 
 
-
   public getAllBooks(): Bibliotheque[] {
     return this.tab;
   }
@@ -75,12 +74,29 @@ export class BibliothequeService {
   public isReserved(id: number): boolean {
     return this.getBookById(id).reserved;
   }
+
+  public getOwner(id: number): number | null {
+    return this.getBookById(id).byUser;
+  }
+
   public reserveBook(id: number): void {
     let component = this.tab.find(cpt => cpt.id === id);
     if (!component) {
       throw new Error('Livre non trouver');
     } else {
       component.reserved = true;
+      component.byUser = this.accService.getId();
     }
   }
+
+  public returnBook(id: number): void {
+    let component = this.tab.find(cpt => cpt.id === id);
+    if (!component) {
+      throw new Error('Livre non trouver');
+    } else {
+      component.reserved = false;
+      component.byUser = null;
+    }
+  }
+
 }

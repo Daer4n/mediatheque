@@ -1,9 +1,7 @@
-<div class="component">
+<div class="component" (click)="redirectToBook(book.id)">
   <img src="{{ book.image }}">
   <br>
   <p>{{ book.title }}</p>
-  <p>{{ book.author }}</p>
-  <p>{{ book.synopsis }}</p>
   <p *ngIf="book.reserved && verifyConnected()">Réservé</p>
-  <button *ngIf="!book.reserved && verifyConnected()" (click)="reserveBook(book.id)">Réserver</button>
+  <p *ngIf="!book.reserved && verifyConnected()">Disponible</p>
 </div>

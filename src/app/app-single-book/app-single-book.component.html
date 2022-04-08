@@ -1,0 +1,9 @@
+<div class="component app">
+  <img src="{{ book.image }}">
+  <br>
+  <p>{{ book.title }}</p>
+  <p>{{ book.author }}</p>
+  <p>{{ book.synopsis }}</p>
+  <button *ngIf="book.reserved && verifyConnected() && ownedByMe(book.id)" (click)="returnBook(book.id)">Rendre</button>
+  <button *ngIf="!book.reserved && verifyConnected()" (click)="reserveBook(book.id)">Réserver</button>
+</div>

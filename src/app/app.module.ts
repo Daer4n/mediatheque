@@ -9,15 +9,17 @@ import { AppLoginComponent } from './app-login/app-login.component';
 import { FormsModule } from '@angular/forms';
 import { AppBookComponent } from './app-book/app-book.component';
 import { AppReservationComponent } from './app-reservation/app-reservation.component';
+import { AppSingleBookComponent } from './app-single-book/app-single-book.component';
 
 @NgModule({
-	declarations: [		
+	declarations: [
 		AppComponent,
 		AppHeaderComponent,
     AppAccueilComponent,
     AppLoginComponent,
-      AppBookComponent,
-      AppReservationComponent
+    AppBookComponent,
+    AppReservationComponent,
+    AppSingleBookComponent
    ],
 	imports: [
 		BrowserModule,

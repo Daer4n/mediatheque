@@ -3,6 +3,8 @@
     <input type="radio" name="books" checked (click)="showAllBooks()"><span>Tous les livres</span>
     <br>
     <input type="radio" name="books" (click)="showAvailableBooks()"><span>Les livres disponibles</span>
+    <br>
+    <input type="radio" name="books" (click)="showMyBooks()"><span>Les livres que j'ai réservés</span>
   </span>
   <app-app-book *ngFor="let cpt of biblio" [book]="cpt"></app-app-book>
 </div>
