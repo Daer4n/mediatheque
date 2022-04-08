@@ -1,0 +1,9 @@
+<div class="component app">
+  <span *ngIf="verifyConnected()">
+    <input type="radio" name="books" checked (click)="showAllBooks()"><span>Tous les livres</span>
+    <br>
+    <input type="radio" name="books" (click)="showAvailableBooks()"><span>Les livres disponibles</span>
+  </span>
+  <app-app-book *ngFor="let cpt of biblio" [book]="cpt"></app-app-book>
+</div>
+

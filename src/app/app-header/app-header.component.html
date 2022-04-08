@@ -1,0 +1,8 @@
+<header class="component app">
+  <nav>
+    <a [routerLink]="['/']">Accueil</a>
+    <a *ngIf="!verifyConnected()" [routerLink]="['/login']">Login</a>
+    <a *ngIf="verifyConnected()" href="/">Disconnect</a>
+    <a [routerLink]="['/reservation']">Réservation</a>
+  </nav>
+</header>

@@ -1,0 +1,9 @@
+<div class="component app">
+  <form (ngSubmit)="onSubmitConnect()">
+    <span>Username : </span><input id="username" name="username" [(ngModel)]="username" type="text" />
+    <br><br>
+    <span>Password : </span><input id="password" name="password" [(ngModel)]="password" type="password" />
+    <br><br>
+    <button type="submit">Se connecter</button>
+  </form>
+</div>
